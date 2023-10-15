@@ -1,12 +1,17 @@
 #include<iostream>
-
+#include <cstring>
+using namespace std;
+/*
+Q1 Vedant Agarwal 
+Swapping using Bubble Sort
+*/
 void swap(char &a, char &b) {
     char temp = a;
     a = b;
     b = temp;
 }
 
-void bubbleSort(char arr[], int size) {
+void bubblesort(char arr[], int size) {
     for (int i = 0; i < size - 1; ++i) {
         for (int j = 0; j < size - i - 1; ++j) {
             if (arr[j] > arr[j + 1]) {
@@ -17,17 +22,17 @@ void bubbleSort(char arr[], int size) {
 }
 
 int main() {
-    const int maxSize = 100;  // Adjust the size as needed
-    char charArray[maxSize];
+    const int maxsize = 100; 
+    char chararray[maxsize];
 
-    std::cout << "Enter a string: ";
-    std::cin.getline(charArray, maxSize);
+    cout << "Enter string=> ";
+    cin.getline(chararray, maxsize);
 
-    int size = strlen(charArray);
+    int size = strlen(chararray);
 
-    bubbleSort(charArray, size);
+    bubblesort(chararray, size);
 
-    std::cout << "Sorted string: " << charArray << std::endl;
+    cout << "Sorted string=> " << chararray << endl;
 
     return 0;
 }
